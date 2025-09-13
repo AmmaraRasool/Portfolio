@@ -1,0 +1,752 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+}
+
+/* ------------------------------
+   Navbar
+------------------------------ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem; /* FIXED: was 'rem' without value */
+  font-weight: bold;
+}
+.logo span {
+  color: #de0dcd;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+nav a:hover,
+nav a.active {
+  color: #ee3bb8;
+}
+
+.btn {
+  background: linear-gradient(90deg, #ff4dd2, #8b5cf6);
+  padding: 0.6rem 1.2rem;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* ------------------------------
+   Hero Section
+------------------------------ */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background: #f9fbff;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+.welcome {
+  text-transform: uppercase;
+  color: rgb(101, 99, 99);
+  letter-spacing: 1px;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.name {
+  color: #333;
+  font-weight: bold;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #ff4dd2, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-text p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+/* Hero Image */
+.hero-img {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.hero-img img {
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border: 5px solid #fff;
+  transition: transform 0.3s;
+}
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+.hero-buttons { 
+  display:flex;
+  gap:1rem; 
+}
+
+/* ------------------------------
+   Social Section
+------------------------------ */
+.social {
+  margin-top: 1rem;
+}
+
+.connect-section {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  /* text-align: center; */
+}
+
+.connect-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+  display: flex;
+  flex: s\;
+}
+
+.social-links{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  margin: 0 10px;
+  font-size: 28px;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #6c63ff;
+  transform: translateY(-3px);
+}
+
+/* ------------------------------
+   Tech Stack Section
+------------------------------ */
+.tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.tech-stack img {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tech-stack img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* ------------------------------
+   About Section
+------------------------------ */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+  background: #fff;
+}
+.about-img {
+  /* border-radius: 10px; */
+  flex: 1 1 40%;
+  text-align: center;
+}
+.about-img img {
+  width: 280px;
+  border-radius: 150px;
+  /* border-radius: 15px; */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border: 5px solid #fff;
+  transition: transform 0.3s ease;
+}
+.about-img img:hover {
+  transform: scale(1.05);
+}
+.about-text {
+  flex: 1 1 55%;
+  padding: 1rem 2rem;
+}
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text; /* for Chrome, Safari */
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  /* background: linear-gradient(90deg, #ff4dd2, #8b5cf6); */
+/* background: linear-gradient(90deg, #3b82f6, #06b6d4); */
+/* background: linear-gradient(90deg, #f97316, #ec4899); */
+/* background: linear-gradient(90deg, #f97316, #ec4899); */
+/* background: linear-gradient(90deg, #22c55e, #14b8a6); */
+/* background: linear-gradient(90deg, #f59e0b, #facc15); */
+/* background: linear-gradient(90deg, #ef4444, #f97316); */
+}
+
+/* ------------------------------
+   Contact Me Button
+------------------------------ */
+
+.contact-btn {
+  width: 100%;                /* make it span full width of parent */
+  display: flex;              /* use flexbox */
+  justify-content: flex-start; /* align button to the left */
+  margin-top: 1rem;           /* spacing below paragraph */
+  /* margin: 2rem 0 0 0; */
+
+}
+
+/* ------------------------------
+   Skills Section
+------------------------------ */
+.skills {
+  padding: 4rem 5%;
+  background: #dadcdd;
+  text-align: center;
+}
+.skills h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+/* .skills_color{
+    color: rgb(220, 46, 127);
+} */
+.skills .subtitle {
+  color: #111111;
+  margin-bottom: 2rem;
+}
+.skill_clr{
+  color: rgb(209, 72, 118);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-card {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.skill-card img {
+  /* width: 70px;  /* make all icons same size */ 
+  height: 70px;   /* keeps them uniform */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------
+   Expertise Section
+------------------------------ */
+.expertise {
+  padding: 4rem 5%;
+  background: #fff;
+  text-align: center;
+}
+.expertise h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.expertise .subtitle {
+  color: #292727;
+  margin-bottom: 2rem;
+}
+
+.progress-container {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+.progress-item {
+  margin-bottom: 1.5rem;
+}
+.progress-item span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #e6e6e6;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 25px;
+  position: relative;
+}
+.progress {
+  background: linear-gradient(90deg, #ff4dd2, #8b5cf6);
+  height: 100%;
+  line-height: 25px;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 25px;
+  animation: loadBar 2s ease;
+}
+
+/* Animation */
+@keyframes loadBar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text,
+  .hero-img {
+    flex: 1 1 100%;
+  }
+  .hero-img img {
+    margin-bottom: 2rem;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    padding: 1rem 0;
+  }
+}
+
+/* Experience Section */
+.exp-gradient {
+  background: linear-gradient(90deg, #452daf, #d87bb6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .experiences {
+  padding: 10px 1opx 10px 10px;
+  justify-content: center;
+
+} */
+.experiences {
+    background: #ede6e6;
+  display: flex;
+  flex-direction: column;  /* STACK vertically: heading → container */
+  align-items: center;     /* center horizontally */
+  text-align: center;
+  padding: 10px;
+  gap: 30px;               /* space between heading and container */
+}
+
+.experience_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;   /* distance between the two cards */
+  width: 100%;
+}
+
+.experience_card {
+  width: 500px;
+  max-width: 95%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #faf9f9;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.experience-header h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.experience_card h2{
+  margin: 0px 0px 5px 0px;
+}
+.experience_card h3{
+    margin: 7px 0px 7px 0px;
+    text-align: left;
+    color: #6d6c6c;
+}
+.experience_card ul{
+  list-style-position: inside; /* keeps bullets aligned */
+  /* padding-left: 0; */
+  text-align: left;
+  color: #24277f;
+}
+.experience_card ul li {
+  margin-bottom: 10px; /* space between each list item */
+  line-height: 1.6;    /* optional: makes text more readable */
+}
+
+.experience_card p{
+    text-align: left;
+    color: #000000;
+
+}
+
+.experience_container .experience_card:first-child {
+  min-height: 300px;  /* or 400px, adjust as you like */
+  width: 700px;
+}
+
+
+/* push the second card down more */
+.experience_container .experience_card:nth-child(2) {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 700px;
+  min-height: 200px;
+
+}
+
+@media (max-width: 600px) {
+  .experience_card {
+    width: 90%;
+  }
+}
+.exp-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+.exp-projects {
+  margin-top: 15px;
+  border-left: 3px solid #8b5cf6; /* gradient can be added */
+  padding-left: 15px;
+}
+.project {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.project-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.project h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+.project p {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+/* get-in-touch  Whole section*/
+.get-in-touch {
+  padding: 50px 20px;              /* top/bottom and left/right padding */
+  background-color: rgb(215, 211, 211);
+}
+
+/* Section header */
+.get-in-touch-header {
+  text-align: center;
+  margin-bottom: 40px;             /* space below heading before cards */
+}
+
+.get-in-touch-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.get-in-touch-header p {
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Cards container */
+.get-in-touch-container {
+  display: flex;
+  justify-content: center;         /* center cards horizontally */
+  gap: 30px;                       /* space between cards */
+  flex-wrap: wrap;                 /* stack on small screens */
+}
+
+/* Card base */
+.get-in-touch-card {
+  border-radius: 12px;  /* rounded corners for the card */
+  padding: 20px;        /* inner spacing between border and content */
+  border: 4px solid transparent; /* transparent border (so gradient shows through) */
+  flex: 1 1 350px;  /* flex-grow:1, flex-shrink:1, min-width:350px */
+  max-width: 450px; /* prevents card from stretching too wide */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* soft shadow for depth */
+  /* Trick: two backgrounds layered */
+  background: 
+    linear-gradient(#fff, #fff) padding-box,         /* solid white background inside */
+    linear-gradient(90deg, #452daf, #d87bb6) border-box; /* gradient for the border */
+}
+
+
+/* Card title */
+.get-in-touch-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #000000;
+}
+
+.get-in-touch-card p {
+  display: flex;
+  align-items: center; /* vertically align icon and text */
+  gap: 10px;           /* spacing between icon and text */
+  margin: 8px 0;
+  color: #333;
+}
+.get-in-touch-card i {
+  color: #452daf; /* consistent theme color */
+  font-size: 1.1rem;
+}
+
+
+/* Spacing inside cards */
+.get-in-touch-card > div {
+  margin-bottom: 15px;
+}
+
+
+/* Labels */
+.get-in-touch-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2f2d2d;
+}
+
+/* Inputs + textarea */
+.get-in-touch-card input,
+.get-in-touch-card textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.get-in-touch-card input:focus,
+.get-in-touch-card textarea:focus {
+  border-color: #452daf;
+  box-shadow: 0 0 6px rgba(69, 45, 175, 0.3);
+}
+
+/* Textarea only */
+.get-in-touch-card textarea {
+  min-height: 120px;
+  resize: vertical;
+  color: #000; /* normal black text when typing */
+}
+
+.get-in-touch-card textarea::placeholder {
+  color: #837f7f; 
+  /* When the textarea is empty → the gray placeholder shows.
+  When the user starts typing → their text will appear in black (color: #000), not gray. */
+}
+
+/* Button after feedback */
+.btn-feedback {
+  display: inline-block;  
+  padding: 12px 24px;                  /* size of button */
+  font-size: 1rem;                     /* text size */
+  font-weight: 600;                    /* bold text */
+  color: #fff;                         /* white text */
+  background: linear-gradient(90deg, #452daf, #d87bb6); /* gradient background */
+  border: none;                        /* remove default border */
+  border-radius: 8px;                  /* rounded corners */
+  cursor: pointer;                     /* pointer on hover */
+  transition: all 0.3s ease;           /* smooth hover animation */
+  width: 100%;                         /* make it full-width under feedback */
+  text-align: center;                  /* center text */
+}
+
+.btn-feedback:hover {
+  opacity: 0.9;                        /* slight fade effect */
+  transform: translateY(-2px);         /* subtle lift */
+  box-shadow: 0 4px 12px rgba(69, 45, 175, 0.3); /* glow effect */
+}
+
+.btn-feedback:active {
+  transform: translateY(0);            /* reset lift when clicked */
+  box-shadow: 0 2px 6px rgba(69, 45, 175, 0.2); /* softer shadow */
+}
+.exp-gradient{
+  background: linear-gradient(90deg, #452daf, #d87bb6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* ================= FOOTER BASE ================= */
+.footer {
+  background-color: #0b081e;       /* dark background for professional look */
+  color: #ddd;                  /* light gray text for readability */
+  padding: 50px 20px 20px;      /* top & side padding, smaller bottom */
+  font-family: Arial, sans-serif;
+}
+
+/* ================= CONTAINER ================= */
+.footer-container {
+  display: grid;                 /* grid layout for 4 columns */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 40px;                     /* spacing between columns */
+  max-width: 1200px;             /* center footer content */
+  margin: 0 auto;
+  
+}
+
+/* ================= COLUMNS ================= */
+.footer-col h2,
+.footer-col h3 {
+  color: #fff;                   /* white headings for contrast */
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  line-height: 1.6;              /* better readability */
+  font-size: 0.95rem;
+}
+
+/* ================= LIST STYLES ================= */
+.footer-col ul {
+  /* list-style: none;       remove bullets */
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;         /* remove underline */
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #d87bb6;                /* gradient pink on hover */
+}
+
+/* ================= SOCIAL ICONS ================= */
+.footer-socials a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #452daf;                /* gradient purple on hover */
+  transform: translateY(-3px);   /* slight lift on hover */
+}
+
+/* ================= ICONS IN CONTACT ================= */
+.footer-col i {
+  margin-right: 8px;             /* space between icon and text */
+  color: #d87bb6;                /* pink gradient color for icons */
+}
+
+/* ================= BOTTOM STRIP ================= */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;    /* subtle line */
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+
+
+
+
+
+
