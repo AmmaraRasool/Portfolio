@@ -12,9 +12,7 @@ body {
   background: #f9f9f9;
 }
 
-/* ------------------------------
-   Navbar
------------------------------- */
+/* ------------------------------Navbar----------------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -25,6 +23,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+
+}
+
+.navbar .btn {
+  /* separate from nav links */
+    /* margin-left: 15px;  */
 }
 
 .logo {
