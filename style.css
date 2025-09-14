@@ -109,7 +109,8 @@ nav a.active {
   text-align: center;
 }
 .hero-img img {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   border: 5px solid #fff;
@@ -123,6 +124,13 @@ nav a.active {
   display:flex;
   gap:1rem; 
 }
+
+  @media (max-width: 600px) {
+  .contact-btn {
+    justify-content: center;
+  }
+}
+
 
 /* ------------------------------
    Social Section
@@ -323,6 +331,18 @@ nav a.active {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+
+
+
+
 /* ------------------------------
    Expertise Section
 ------------------------------ */
@@ -490,10 +510,16 @@ nav a.active {
 }
 
 @media (max-width: 600px) {
+  .experience_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
   .experience_card {
     width: 90%;
   }
 }
+
 .exp-icon {
   font-size: 2rem;
   margin-right: 15px;
@@ -856,6 +882,19 @@ nav a.active {
   padding-top: 15px;
   font-size: 0.85rem;
   color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 
