@@ -477,12 +477,15 @@ nav a.active {
 .experience_container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;       /* allows stacking on small screens */
+  justify-content: center;
   align-items: center;
   gap: 60px;   /* distance between the two cards */
   width: 100%;
 }
 
 .experience_card {
+   flex: 1 1 45%;         /* both cards take ~45% width */
   width: 500px;
   max-width: 95%;
   padding: 20px;
@@ -490,6 +493,8 @@ nav a.active {
   background: #faf9f9;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .experience-header h1{
