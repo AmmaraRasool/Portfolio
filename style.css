@@ -34,10 +34,6 @@ body {
 
 }
 
-.navbar .btn {
-  /* separate from nav links */
-    /* margin-left: 15px;  */
-}
 
 .logo {
   font-size: 1.5rem; /* FIXED: was 'rem' without value */
@@ -71,6 +67,27 @@ nav a.active {
 .btn:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 0; /* remove horizontal margin */
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+
 /* ------------------------------Hero Section------------------------------ */
 .hero {
   display: flex;
@@ -107,6 +124,15 @@ nav a.active {
   margin: 1rem 0;
   line-height: 1.6;
 }
+
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
 
 /* Hero Image */
 .hero-img {
@@ -156,7 +182,6 @@ nav a.active {
   font-size: 20px;
   color: #333;
   display: flex;
-  flex: s\;
 }
 
 .social-links{
@@ -391,7 +416,9 @@ nav a.active {
   text-align: right;
   padding-right: 10px;
   border-radius: 25px;
-  animation: loadBar 2s ease;
+  /* animation: loadBar 2s ease; */
+  width: 0;
+  animation: loadBar 2s ease forwards;
 }
 
 /* Animation */
@@ -435,8 +462,8 @@ nav a.active {
 /* .experiences {
   padding: 10px 1opx 10px 10px;
   justify-content: center;
-
 } */
+ 
 .experiences {
     background: #ede6e6;
   display: flex;
@@ -495,10 +522,12 @@ nav a.active {
 
 }
 
-.experience_container .experience_card:first-child {
-  min-height: 300px;  /* or 400px, adjust as you like */
-  width: 700px;
+.experience_container .experience_card:first-child,
+.experience_container .experience_card:nth-child(2) {
+  width: 55%;
+  min-height: auto; 
 }
+
 
 
 /* push the second card down more */
@@ -509,6 +538,12 @@ nav a.active {
   min-height: 200px;
 
 }
+@media(max-width: 600px){
+  .experience_card h3{
+    text-align: center;
+  }
+}
+
 
 @media (max-width: 600px) {
   .experience_container {
@@ -759,7 +794,7 @@ nav a.active {
 .project-card .project-img {
   width: 100%;
   height: 300px;                 /* increased height */
-  object-fit: contain;           /* fit entire image without cropping */
+  object-fit: cover;           /*  makes images fill card nicely  */
   border-radius: 12px 12px 0 0;
   display: block;
   background-color: #fff;        /* prevent empty space if image is smaller */
